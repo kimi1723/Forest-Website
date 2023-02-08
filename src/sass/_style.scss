@@ -457,6 +457,23 @@ body {
 			}
 		}
 
+		&-data-processing {
+			padding-top: 1em;
+			text-align: center;
+			font-size: 1.2rem;
+
+			&-link {
+				color: c.$disabled;
+				outline: none;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: c.$desaturated-light-green;
+				}
+			}
+		}
+
 		&-btn {
 			padding: 0.5em 0;
 			margin: 1em 0 2em;
