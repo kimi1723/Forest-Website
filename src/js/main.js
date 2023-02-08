@@ -53,6 +53,27 @@ const handleScrollSpy = () => {
 	}
 };
 
+const handleSubPages = () => {
+	if (document.body.classList.contains('main-page') === false) {
+		const logoLink = document.querySelector('.nav__logo-text');
+		const footerLink = document.querySelector('.footer-logo__link');
+		const linksArray = [logoLink, footerLink];
+
+		navLinks.forEach(link => {
+			if (link.attributes.href.value.charAt(0) !== '/') {
+				linksArray.push(link);
+			}
+		});
+
+		linksArray.forEach(link => {
+			const linkHref = link.attributes.href.value;
+			const newLinkHref = `/index.html${linkHref}`;
+
+			link.setAttribute('href', newLinkHref);
+		});
+	}
+};
+
 handleYear();
 navBtn.addEventListener('click', handleNav);
 navLinks.forEach(link => link.addEventListener('click', handleNav));
@@ -61,4 +82,4 @@ btnEventListeners.forEach(e => {
 });
 
 window.addEventListener('scroll', handleScrollSpy);
-window.addEventListener('DOMContentLoaded', handleScrollSpy);
+handleSubPages();
