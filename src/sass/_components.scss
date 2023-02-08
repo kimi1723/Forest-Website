@@ -1,0 +1,71 @@
+@use 'colors' as c;
+
+.fa-tree {
+	color: rgb(65, 65, 65);
+}
+
+.section {
+	padding: 1em 2em;
+
+	&__title {
+		padding: 1em 0;
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		&--offer {
+			margin-top: 100px;
+		}
+	}
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.btn-styles {
+	position: relative;
+	width: 100%;
+	font-size: 2.2rem;
+	font-weight: 200;
+	color: c.$disabled;
+	outline: none;
+	border: none;
+	border-radius: 8px;
+	background-color: transparent;
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.5);
+	transition: 0.4s;
+	transition-property: color, background-color, box-shadow;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 0;
+
+	&:hover,
+	&:focus,
+	&:active {
+		font-weight: 400;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -130%;
+		left: -80%;
+		height: 300%;
+		width: 50%;
+		background-color: #fff4;
+		transform: rotate(25deg);
+		transition: all 0.5s;
+		overflow: hidden;
+		z-index: -1;
+	}
+
+	&:hover::before,
+	&:focus::before,
+	&:active::before {
+		left: 130%;
+	}
+}

@@ -1,0 +1,174 @@
+@media (min-width: 576px) {
+	.section {
+		&__title {
+			font-size: 4rem;
+		}
+	}
+	// NAVIGATION
+	.nav {
+		&__navbar {
+			padding: 1.5em 2em;
+		}
+
+		&__logo {
+			font-size: 3.5rem;
+		}
+	}
+
+	// HEADER
+	.header {
+		height: 50vh;
+
+		&__heading {
+			font-size: 3rem;
+
+			&-text {
+				padding-top: 0;
+				font-size: 4rem;
+			}
+		}
+	}
+
+	// ABOUT US
+	.about-us {
+		padding: 5em;
+
+		&__text {
+			&-heading {
+				font-size: 3rem;
+			}
+
+			&-content {
+				font-size: 1.5rem;
+			}
+		}
+	}
+	// ASIDE
+	.aside {
+		max-height: 200px;
+
+		&__title {
+			padding: 1em 3em;
+			font-size: 2.8rem;
+			text-shadow: 1px 1px #000;
+		}
+	}
+
+	// OFFER
+	.offer {
+		&__title {
+			font-size: 2rem;
+		}
+
+		.cards-box {
+			&__item {
+				max-width: 320px;
+
+				&-title {
+					font-size: 3.5rem;
+				}
+
+				&-price {
+					font-size: 4.5rem;
+				}
+			}
+
+			&__list {
+				&-item {
+					font-size: 1.8rem;
+				}
+			}
+
+			&__button {
+				font-size: 2.5rem;
+			}
+		}
+
+		&__link {
+			font-size: 2.5rem;
+		}
+	}
+
+	// FOOTER
+	.footer {
+		&-box {
+			margin: 5em 0 11em;
+		}
+
+		&-logo {
+			&__link {
+				font-size: 5rem;
+			}
+		}
+
+		&-info {
+			&__about-us,
+			&__our-company,
+			&__documents {
+				width: 33%;
+			}
+
+			&__heading {
+				font-size: 2.5rem;
+			}
+
+			&-list {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	// HEADER
+	.header {
+		height: 65vh;
+		background-image: url(/dist/img/desktop/header-desktop.jpg);
+
+		&__heading {
+			padding-left: 2em;
+		}
+	}
+
+	// ASIDE
+	.aside {
+		&__title {
+			padding: 1em 2.5em;
+			font-size: 4rem;
+		}
+	}
+
+	// OFFER
+	.offer {
+		.cards-box {
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			&__item {
+				margin: 3em;
+			}
+		}
+	}
+
+	// CONTACT
+	.contact {
+		&__form {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			&-box {
+				&:first-of-type,
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					width: 30%;
+				}
+			}
+
+			&-btn {
+				max-width: 300px;
+			}
+		}
+	}
+}

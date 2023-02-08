@@ -1,0 +1,239 @@
+@use 'colors' as c;
+
+@media (min-width: 992px) {
+	// ADJUSTING NAV HEIGHT
+	html {
+		scroll-padding-top: 110px;
+	}
+
+	.section {
+		&__title {
+			&--offer {
+				margin-top: 130px;
+			}
+		}
+	}
+
+	// NAVIGATION
+	.main-page {
+		.nav {
+			&__links {
+				&-link {
+					&--active {
+						color: c.$white;
+						background-color: c.$dark;
+					}
+				}
+			}
+		}
+	}
+
+	.nav {
+		&__navbar {
+			padding-right: 0;
+			overflow: hidden;
+		}
+
+		.hamburger {
+			display: none;
+		}
+
+		&__links {
+			position: relative;
+			top: 0;
+			flex-direction: row;
+			height: auto;
+			max-height: 8rem;
+			transform: translateX(0);
+			opacity: 1;
+
+			&-link {
+				padding: 4em 2em;
+				font-size: 2rem;
+				outline: none;
+				color: c.$dark;
+				transition: background-color 0.3s, color 0.3s;
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: c.$white;
+					background-color: c.$dark;
+				}
+			}
+		}
+	}
+
+	// HEADER
+	.header {
+		height: 60vh;
+
+		&__heading {
+			padding-left: 2em;
+		}
+	}
+
+	// ABOUT US
+	.about-us {
+		&-box {
+			position: relative;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		&__img {
+			margin-right: 5em;
+			width: 50%;
+		}
+
+		&__text {
+			width: 50%;
+			text-align: left;
+
+			&-heading {
+				margin: 0 0 0.3em 0;
+			}
+
+			&-content,
+			span {
+				text-indent: 0;
+			}
+		}
+	}
+
+	// OFFER
+	.offer {
+		&__link {
+			font-size: 3rem;
+		}
+	}
+	// FOOTER
+	.footer {
+		&-box {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+			padding-top: 3em;
+		}
+
+		&-logo {
+			margin-left: 2em;
+			width: 25%;
+
+			&__link {
+				font-size: 5rem;
+			}
+		}
+
+		&-info {
+			padding-top: 0;
+			width: 75%;
+
+			&__about-us,
+			&__our-company,
+			&__documents {
+				padding: 0;
+			}
+		}
+	}
+
+	// CONTACT
+	.contact {
+		&-box {
+			&__heading {
+				padding: 3em 0 2em;
+			}
+		}
+		&__form {
+			&-box {
+				&:first-of-type,
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					margin-bottom: 1em;
+				}
+			}
+			&-btn {
+				max-width: 400px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.section {
+		&__title {
+			font-size: 5rem;
+		}
+	}
+	// HEADER
+	.header {
+		&__heading {
+			&-text {
+				font-size: 5rem;
+			}
+		}
+	}
+	// ABOUT US
+	.about-us {
+		padding: 3em 10em;
+
+		&__text-content {
+			font-size: 1.8rem;
+		}
+	}
+
+	// ASIDE
+	.aside {
+		margin-top: 4em;
+		max-height: 400px;
+		background-image: url(/dist/img/desktop/hero-img-desktop.jpg);
+
+		&__title {
+			padding: 1em 5em;
+			font-size: 5rem;
+		}
+	}
+	// OFFER
+	.offer {
+		&__link {
+			font-size: 3.5rem;
+		}
+	}
+
+	// FOOTER
+	.footer {
+		&-logo {
+			width: auto;
+
+			&__link {
+				font-size: 6rem;
+			}
+		}
+
+		&-info {
+			justify-content: space-around;
+			width: auto;
+
+			&__about-us,
+			&__our-company,
+			&__documents {
+				align-items: flex-start;
+				margin: 0 5em;
+				padding: 0;
+				width: auto;
+			}
+
+			&__heading {
+				font-size: 3rem;
+			}
+
+			&-list {
+				font-size: 1.7rem;
+			}
+		}
+
+		&-copyright {
+			font-size: 1.7rem;
+		}
+	}
+}
